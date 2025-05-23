@@ -210,7 +210,7 @@ footer hr{
     padding-bottom: 25px;
     font-family: "Montserrat", sans-serif;
 }
-@media (max-width:1024px) {
+@media (min-width:1024px) {
     footer{
     background-color: black;
     width: 100%;
