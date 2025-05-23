@@ -638,6 +638,11 @@ a{
     font-size: 0.5rem; 
   }
 
+ .logo img{
+    width: 200px;
+    align-items: center;
+ }
+
   .hero{
     flex-direction: column;
   }
