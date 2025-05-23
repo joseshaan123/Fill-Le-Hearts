@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<body>
+    <div class="logo">
+        <img src="logo-removebg-preview.png" alt="" class="logo">
+     </div>
+    <header class="navbar">
+        <nav class="navbar-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+  </header>
+
+    <h1>ABOUT US</h1>
+
+    <div class="aboutus">
+        <div  class="aboutusdiv1">
+            <h2>What's dessert without a little love and a lot of goodness?</h2>
+            <p>Fill Le Heart was founded in 2022, by 2 brothers, with a kitchen next to their house in Kerala, Thrissur & a big dream to ensure that people across India gets access to the most famous traditional dessert of Oman, Omani Halwa and many more unique food experience.</p>
+        </div class="aboutusdiv2">
+        <img src="aboutusman.png" alt="" >
+    </div>
+
+    <section class="moto">
+      <div class="vmv">
+        <h1>VISION,MISSION & VALUES</h1>
+        <p>Back in 2022, we were selling our products with the help of social media to limited areas in Kerala. Today we are able to serve across India with trusted and best delivery partners. It's the love and support of thousands of people that has brought us this far. People who share our love for authentic, traditional dessert.</p>
+      </div>
+      <div class="card-container">
+        <div class="moto-card">
+          <div class="mtext">
+            <h1>Vision</h1>
+            <div class="pcontainer">
+              <p>Our vision at Fill Le Heart is to be the leading and trusted provider of unique, fresh and preservative-free sweets and ready-to-eat foods for inspiring people to embrace a healthier, happier and sustainable lifestyle. Through our relentless pursuit of quality, innovation and sustainable practices, we aim to the trusted choice for everyone seeking authentic omani halwa, time-saving food solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="moto-card">
+          <div class="mtext">
+            <h1>Mission</h1>
+            <div class="pcontainer">
+              <p>At Fill Le Heart, our mission is to offer authentic, fresh and preservative-free food that doesn't just fulfil your cravings for traditional taste, but also fulfils your heart.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="moto-card">
+          <div class="mtext">
+            <h1>Values</h1>
+            <div class="pcontainer">
+              <p>At Fill Le Heart, we are committed to preserving the rich legacy of Omani halwa by blending traditional recipes with premium ingredients, creating artisanal sweets that not only satisfy your cravings but also bring you closer to the warmth of culture, family, and cherished memories.</p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+
+
+
+
+
+<footer>
+        <img src="fillheartlogo1234.png" alt="" class="footerimg">
+        <div class="footer">
+        
+        
+         <div class="footerdiv1">
+            <h3>About Us</h3>
+            <hr></hr>
+            <p>Fill Le Heart was founded in 2022, by 2 brothers, with a kitchen next to their house in Kerala, Thrissur &amp; a big dream to ensure that people across India gets access to the most famous traditional dessert of Oman, Omani Halwa and many more unique food experience.</p>
+            <div class="img">
+            <img src="facebook.png" alt="">
+            <img src="instagram.png" alt="" class="insta">
+            </div>
+         </div>
+         <div class="footerdiv2">
+            <h3>Quick Links</h3>
+            <hr>
+            <ul>
+            <li class="one">About Us</li>
+            <li>Contact Us</li>
+            <li>Products</li>
+            <li>Login</li>
+            </ul>
+            
+        </div>
+        <div class="footerdiv3">
+            <h3>Support</h3>
+            <hr>
+            <ul>
+            <li class="one">Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Shipping Policy</li>
+            <li>Refund Policy</li>    
+            <li>Faq</li> 
+        </ul>
+        </div>
+        
+        <div class="footerdiv4">
+            <h3>Contact Info</h3>
+            <hr>
+            <ul>
+            <li class="one">info@fillleheart</li>
+            <li> +918089064994</li>
+            <li>Vallappad,Thrissur<br>Kerala,India</li>
+            </ul>
+        
+         </div>
+        </div>
+    </div>
+    <p class="finalp1">Business Hours: 10 AM to 7PM- Monday to Saturday</p>
+    <hr class="finalline">
+    <p class="finalp2">@ 2023 Fill Le Heart. All Rights Reserved</p>
+    </footer>
+
+    
+</body>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate ABOUT US h1
+  gsap.from("h1", {
+    scrollTrigger: {
+      trigger: "h1",
+      start: "top 90%",
+      end: "top 40%",
+      scrub: true
+    },
+    y: 80,
+    opacity: 0,
+    ease: "power2.out"
+  });
+
+  // ABOUT US section text
+  gsap.from(".aboutus div h2, .aboutus div p", {
+    scrollTrigger: {
+      trigger: ".aboutus",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true
+    },
+    y: 60,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // ABOUT US image
+  gsap.from(".aboutus img", {
+    scrollTrigger: {
+      trigger: ".aboutus",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true
+    },
+    x: 100,
+    opacity: 0,
+    ease: "power2.out"
+  });
+
+  // VISION section heading and intro paragraph
+  gsap.from(".vision h2, .vision > p", {
+    scrollTrigger: {
+      trigger: ".vision",
+      start: "top 90%",
+      end: "top 40%",
+      scrub: true
+    },
+    y: 80,
+    opacity: 0,
+    ease: "power2.out"
+  });
+
+  // VISION card boxes
+  document.querySelectorAll('.visiondiv .div1').forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        end: "bottom 60%",
+        scrub: true
+      },
+      y: 100,
+      opacity: 0,
+      ease: "power2.out"
+    });
+  });
+
+
+  gsap.from(".visiondiv h3", {
+    scrollTrigger: {
+      trigger: ".visiondiv",
+      start: "top 90%",
+      end: "top 60%",
+      scrub: true
+    },
+    y: 40,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "power2.out"
+  });
+</script>
+
+
+
+</html>
