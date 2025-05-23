@@ -619,7 +619,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.45rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -635,7 +635,7 @@ a{
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 0.6rem; 
+    font-size: 0.5rem; 
   }
 
   .hero{
@@ -696,7 +696,7 @@ a{
   .scroll-text-everyone,
   .scroll-text-talking
   {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .cards-container {
