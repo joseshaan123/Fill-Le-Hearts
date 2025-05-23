@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+
 <body>
     <div class="logo">
         <img src="..\Images\Fille le heart Images\logo-removebg-preview.png" alt="" class="logo">
@@ -23,6 +24,7 @@
             </ul>
          </nav>
   </header>
+  <div id="circle-transition"></div>
 
     <h1>ABOUT US</h1>
 
@@ -216,6 +218,43 @@
     stagger: 0.1,
     ease: "power2.out"
   });
+
+  function transitionToPage(url) {
+  const circle = document.getElementById('circle-transition');
+
+  gsap.to(circle, {
+    duration: 0.8,
+    width: "300vw",
+    height: "300vw",
+    ease: "power4.inOut",
+    onComplete: () => {
+      window.location.href = url;
+    }
+  });
+}
+document.querySelectorAll("a").forEach(link => {
+  const url = link.href;
+  link.addEventListener("click", (e) => {
+    if (url.includes(window.location.hostname)) {
+      e.preventDefault();
+      transitionToPage(url);
+    }
+  });
+});
+window.addEventListener("load", () => {
+  const circle = document.getElementById('circle-transition');
+  gsap.fromTo(circle, {
+    width: "300vw",
+    height: "300vw"
+  }, {
+    duration: 1,
+    width: 0,
+    height: 0,
+    ease: "power4.out",
+    delay: 0.2
+  });
+});
+
 </script>
 
 

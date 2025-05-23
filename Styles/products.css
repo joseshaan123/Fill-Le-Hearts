@@ -66,7 +66,8 @@ a{
     color: #523122;
     font-family: grot;
     font-size: 3rem ;
-    margin-left: 400px;
+    margin: 0 auto;
+    margin-left: 500px;
     z-index: 10;
     position: relative;
 }
@@ -583,6 +584,19 @@ font-family: "Montserrat", sans-serif;
   width: 145px;
   height: 35px;
   background-color: #D5890C;
+}
+
+#circle-transition {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle at center, #4A3B31 0%, #3D2B1F 70%, #1E150F 100%);
+  border-radius: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1024px) {
