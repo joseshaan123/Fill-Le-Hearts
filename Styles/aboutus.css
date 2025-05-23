@@ -394,7 +394,7 @@ footer hr{
     font-family: "Montserrat", sans-serif;
 }
 
-@media (min-width:720px) and (max-width:1024px){
+@media (max-width:720px) and (max-width:1024px){
     .navbar {
     width: 85%;
     height: auto;
