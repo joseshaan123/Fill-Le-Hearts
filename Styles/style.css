@@ -29,7 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem; /* spacing between links */
+    gap: 1rem; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -67,8 +67,9 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 15%;
+    width: 20%;
+    margin-top: 5%;
+    position: relative;
 }
   
 .logo img{
@@ -187,13 +188,13 @@ a{
     position: relative;
     width: 100%;
     height: 500px;
-    background-color: #fffdfc; /* Optional background */
+    background-color: #fffdfc; 
     overflow: hidden;
     margin-top: 100px;
   }
 
   .h-pull h1{
-    margin: -1px 0; /* Negative top/bottom margin to pull them closer */
+    margin: -1px 0; 
     padding: 0;
     line-height: 1;
     position: relative;
@@ -292,7 +293,7 @@ a{
 
 .media-card {
   width: 220px;
-  height: 390px; /* Maintaining 9:16 aspect ratio */
+  height: 390px; 
   background: #000;
   border-radius: 20px;
   border: 4px solid #6f3d20;
@@ -337,7 +338,7 @@ a{
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Ensure popup video scales and plays properly */
+
 .media-card-popup video {
   border-radius: 20px;
   object-fit: cover;

@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-/* Animations */
+
 @keyframes fadeSlideDown {
   0% {
     opacity: 0;
@@ -29,7 +29,7 @@ body {
   }
 }
 
-/* --- Navbar Styles --- */
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -66,8 +66,8 @@ body {
 }
 
 .nav-links li {
-  display: inline-block; /* Use inline-block for horizontal items */
-  margin: 0 15px; /* Adjust spacing between links */
+  display: inline-block; 
+  margin: 0 15px; 
 }
 
 .nav-links li a {
@@ -84,7 +84,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Main Content Styles --- */
+
 h1 {
   text-align: center;
   font-size: 3em;
@@ -95,8 +95,8 @@ h1 {
 
 main {
   flex-grow: 1;
-  padding-top: 70px; /* Space for the fixed navbar */
-  padding-bottom: 50px; /* Space between main content and new footer */
+  padding-top: 70px; 
+  padding-bottom: 50px; 
 }
 
 .contact-form {
@@ -115,7 +115,7 @@ main {
   animation: fadeSlideDown 1s ease-out;
   border-radius: 0;
   overflow: hidden;
-  margin-bottom: 30px; /* Space between form and footer */
+  margin-bottom: 30px; 
 }
 
 .contact-form form {
@@ -163,7 +163,7 @@ button:hover {
   padding: 10px;
   margin-top: 10px;
   font-weight: bold;
-  color: #6B3E2E; /* Success color */
+  color: #6B3E2E; 
 }
 
 .contact-info {
@@ -189,4 +189,4 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* --- Footer Styles --- */
+

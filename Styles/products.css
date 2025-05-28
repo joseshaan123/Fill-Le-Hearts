@@ -32,7 +32,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem; /* spacing between links */
+    gap: 1rem; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -314,8 +314,8 @@ a{
 
 .ing-section{
   background-image: url('/ing.bg.jpeg');
-  background-size: cover;      /* Scales image to cover the whole section */
-  background-position: center; /* Centers the image */
+  background-size: cover;      
+  background-position: center; 
   background-repeat: no-repeat;
   padding: 100px 20px;
   text-align: center;
@@ -587,7 +587,7 @@ font-family: "Montserrat", sans-serif;
 
 @media only screen and (min-width: 720px) and (max-width: 1024px) {
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
     font-family: "Montserrat", sans-serif;
   }
 
@@ -609,20 +609,20 @@ font-family: "Montserrat", sans-serif;
 
   .nav-links li {
     display: inline;
-    margin: 0 10px; /* Adjust the spacing */
+    margin: 0 10px; 
   }
 
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem; 
   }
 
   .Prod {
-    font-size: 4rem; /* Adjust heading size */
+    font-size: 4rem; 
     color: #523122;
     text-align: center;
-    margin-top: 80px; /* Adjust top margin */
+    margin-top: 80px; 
     margin-bottom: 80px;
   }
 
@@ -637,7 +637,7 @@ font-family: "Montserrat", sans-serif;
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Adjust spacing between items */
+    gap: 20px; 
     padding: 20px;
   }
 
@@ -675,7 +675,7 @@ font-family: "Montserrat", sans-serif;
   .image-box,
   .image-box-2,
   .image-box-3 {
-    width: 90%; /* Adjust image box width */
+    width: 90%; 
     margin: 20px auto;
   }
 
@@ -775,7 +775,7 @@ font-family: "Montserrat", sans-serif;
     background-color: #D5890C;
   }
 
-  /* Centering the content of the footer sections */
+  
   .footerdiv1,
   .footerdiv2,
   .footerdiv3,
@@ -864,7 +864,7 @@ font-family: "Montserrat", sans-serif;
 
   footer {
     padding: 0;
-    background-color: #000; /* black footer */
+    background-color: #000;
     color: #fff;
   }
 

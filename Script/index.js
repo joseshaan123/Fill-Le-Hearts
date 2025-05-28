@@ -1,10 +1,6 @@
 // Register GSAP ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
 
-// ===============================
-// 1. HERO SECTION ARC ANIMATION (ADVANCED)
-// ===============================
-
 gsap.set([".hero-left", ".hero-right", ".logo", ".hero-txt", ".border", ".h-image"], {
   x: 0,
   y: 0,
@@ -24,7 +20,7 @@ const heroTimeline = gsap.timeline({
   }
 });
 
-// Animate hero containers
+
 heroTimeline
   .to(".hero-left", {
     x: "-70vw",
@@ -69,11 +65,7 @@ heroTimeline
     ease: "power1.inOut"
   }, 0.1);
 
-// ===============================
-// 2. why choose Section
-// ===============================
 
-// Animate each feature-item upwards with fade-in and reverse on scroll up
 gsap.utils.toArray('.feature-item').forEach((item, index) => {
   gsap.from(item, {
     scrollTrigger: {
@@ -89,7 +81,7 @@ gsap.utils.toArray('.feature-item').forEach((item, index) => {
   });
 });
 
-// Animate halwa image from the left and reverse on scroll up
+
 gsap.from('.halwa-image', {
   scrollTrigger: {
     trigger: '.halwa-image',
@@ -102,9 +94,7 @@ gsap.from('.halwa-image', {
   ease: "power2.out"
 });
 
-// ===============================
-// 3. Section 3
-// ===============================
+
 
 gsap.fromTo('.section3-img',
   { opacity: 0, y: 60 },
@@ -120,11 +110,6 @@ gsap.fromTo('.section3-img',
 );
 
 
-
-
-  // ===============================
-  // 2. "What's Everyone Talking" TEXT
-  // ===============================
   const textTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll-animation-section",
@@ -140,9 +125,7 @@ gsap.fromTo('.section3-img',
     .to(".scroll-text-everyone", { x: "100vw", duration: 2 }, "<")
     .to(".scroll-text-talking", { y: "100vh", duration: 2 }, "<");
 
-  // ===============================
-  // 3. MEDIA CARD SCROLL ANIMATIONS
-  // ===============================
+  
   const cards = gsap.utils.toArray(".media-card");
 
   cards.forEach((card, index) => {
@@ -164,7 +147,7 @@ gsap.fromTo('.section3-img',
     });
   });
 
-  // h-pull section text animation
+
 gsap.fromTo(".text-background h1", 
   {
     y: 100,
@@ -179,7 +162,7 @@ gsap.fromTo(".text-background h1",
       trigger: ".h-pull",
       start: "top 75%",
       end: "bottom center",
-      toggleActions: "play reverse play reverse", // animate on enter and leave
+      toggleActions: "play reverse play reverse",
       markers: false
     }
   }
@@ -187,9 +170,7 @@ gsap.fromTo(".text-background h1",
 
 
 
- // ===============================
-// 4. VIDEO CARD CLICK-TO-POPUP (WITH GSAP & BLUR)
-// ===============================
+
 document.addEventListener("DOMContentLoaded", () => {
   const mediaCards = document.querySelectorAll('.media-card');
 
@@ -197,15 +178,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener('click', () => {
       const source = card.querySelector('video source').src;
 
-      // Create overlay
       const overlay = document.createElement('div');
       overlay.classList.add('video-popup-overlay');
 
-      // Create popup card
       const popupCard = document.createElement('div');
       popupCard.classList.add('popup-video-card');
 
-      // Create video element
       const popupVideo = document.createElement('video');
       popupVideo.src = source;
       popupVideo.controls = true;
@@ -218,7 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(overlay);
       document.body.classList.add('no-scroll');
 
-      // GSAP entry animation
       gsap.fromTo(popupCard, {
         scale: 0.6,
         opacity: 0
@@ -229,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out"
       });
 
-      // Close popup when clicking outside video
       overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
           gsap.to(popupCard, {
