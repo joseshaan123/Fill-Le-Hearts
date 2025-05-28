@@ -62,14 +62,15 @@ a{
     font-size: 6rem;
 }
 
-.items{
+.items {
+    display: block;
+    text-align: center;
     color: #523122;
     font-family: grot;
-    font-size: 3rem ;
-    margin: 0 auto;
-    margin-left: 500px;
+    font-size: 3rem;
     z-index: 10;
     position: relative;
+    margin: 0 auto;
 }
 
 .arch svg {
