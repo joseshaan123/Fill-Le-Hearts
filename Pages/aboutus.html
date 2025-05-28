@@ -140,121 +140,43 @@
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.from("h1", {
-    scrollTrigger: {
-      trigger: "h1",
-      start: "top 90%",
-      end: "top 40%",
-      scrub: true
-    },
-    y: 80,
-    opacity: 0,
-    ease: "power2.out"
-  });
+  const circle = document.getElementById('circle-transition');
+  window.addEventListener("load", function () {
+    gsap.fromTo(circle, {
+      width: "300vw",
+      height: "300vw"
+    }, {
+      duration: 1,
+      width: 0,
+      height: 0,
+      ease: "power4.out"
+    });
 
-  gsap.from(".aboutus div h2, .aboutus div p", {
-    scrollTrigger: {
-      trigger: ".aboutus",
-      start: "top 80%",
-      end: "bottom 60%",
-      scrub: true
-    },
-    y: 60,
-    opacity: 0,
-    stagger: 0.2,
-    ease: "power2.out"
-  });
-
-  gsap.from(".aboutus img", {
-    scrollTrigger: {
-      trigger: ".aboutus",
-      start: "top 80%",
-      end: "bottom 60%",
-      scrub: true
-    },
-    x: 100,
-    opacity: 0,
-    ease: "power2.out"
-  });
-
-  gsap.from(".vision h2, .vision > p", {
-    scrollTrigger: {
-      trigger: ".vision",
-      start: "top 90%",
-      end: "top 40%",
-      scrub: true
-    },
-    y: 80,
-    opacity: 0,
-    ease: "power2.out"
-  });
-
-
-  document.querySelectorAll('.visiondiv .div1').forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 85%",
-        end: "bottom 60%",
-        scrub: true
-      },
-      y: 100,
+    gsap.from(".aboutus", {
+      duration: 1.5,
+      scale: 0,
       opacity: 0,
-      ease: "power2.out"
+      ease: "power3.out",
+      delay: 0.8
     });
   });
 
 
-  gsap.from(".visiondiv h3", {
-    scrollTrigger: {
-      trigger: ".visiondiv",
-      start: "top 90%",
-      end: "top 60%",
-      scrub: true
-    },
-    y: 40,
-    opacity: 0,
-    stagger: 0.1,
-    ease: "power2.out"
+  document.querySelectorAll("section:not(.aboutus)").forEach((section) => {
+    gsap.from(section, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out"
+    });
   });
-
-  function transitionToPage(url) {
-  const circle = document.getElementById('circle-transition');
-
-  gsap.to(circle, {
-    duration: 0.8,
-    width: "300vw",
-    height: "300vw",
-    ease: "power4.inOut",
-    onComplete: () => {
-      window.location.href = url;
-    }
-  });
-}
-document.querySelectorAll("a").forEach(link => {
-  const url = link.href;
-  link.addEventListener("click", (e) => {
-    if (url.includes(window.location.hostname)) {
-      e.preventDefault();
-      transitionToPage(url);
-    }
-  });
-});
-window.addEventListener("load", () => {
-  const circle = document.getElementById('circle-transition');
-  gsap.fromTo(circle, {
-    width: "300vw",
-    height: "300vw"
-  }, {
-    duration: 1,
-    width: 0,
-    height: 0,
-    ease: "power4.out",
-    delay: 0.2
-  });
-});
-
 </script>
+
 
 
 
