@@ -394,6 +394,19 @@ footer hr{
     font-family: "Montserrat", sans-serif;
 }
 
+#circle-transition {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle at center, #4A3B31 0%, #3D2B1F 70%, #1E150F 100%);
+  border-radius: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 @media (max-width:720px) and (max-width:1024px){
     .navbar {
     width: 85%;
